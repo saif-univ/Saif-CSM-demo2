@@ -75,11 +75,11 @@ const RadioButton: React.FC<RadioButtonProps> = ({
 
   useEffect(() => {
     // Trigger the handleData callback with the default selection
-    handleData(data[0].value);
+    handleData(data[0]?.value);
   }, [data, handleData]);
 
   const handleSelection = (index: number) => {
-    const changedData = data.map((e, i) => {
+    const changedData = data?.map((e, i) => {
       return { ...e, isSelected: i === index };
     });
     setSelectedIndex(changedData);
