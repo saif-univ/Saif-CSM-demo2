@@ -338,7 +338,7 @@ const CapturedImagesList: React.FC<CapturedImagesListProps> = ({
 
     return (
         <div className="flex flex-col h-full w-full">
-            <h2 className="text-lg font-semibold mb-4">Captured Images</h2>
+            <h2 className="text-lg font-semibold mb-4">Captured Images check 2</h2>
 
             {/* Responsive Grid Container */}
             <div className="grid grid-cols-1 space-y-2 h-1/2 overflow-y-auto flex-grow">
