@@ -305,6 +305,7 @@ const imgData = [
         timestamp: "20241205T100201587Z",
     },
 ];
+const singleImg = require("./CapturedImages/img1.jpg")
 
 interface CapturedImagesListProps {
     images: ImageMetadata[];
@@ -333,7 +334,7 @@ const CapturedImagesList: React.FC<CapturedImagesListProps> = ({
         setCurrentPage(page);
     };
 
-    console.log(imgData, "imgDataimgDataimgDataimgData");
+    console.log(imgData, "imgDataimgDataimgDataimgData", singleImg);
 
 
     return (
@@ -350,12 +351,13 @@ const CapturedImagesList: React.FC<CapturedImagesListProps> = ({
                     >
                         {/* Image Thumbnail */}
                         <div>
-                            {/* <img
-                                src={`/surgical-session/${image.sessionId}/images/${image.filename}`}
+                            <img
+                                src={`/surgical-session/surgery123/images/img1.jpg`}
+                                // src={singleImg}
                                 alt={image.description}
                                 onClick={() => onImageSelect(image)}
                                 className="w-full h-24 object-cover cursor-pointer"
-                            /> */}
+                            />
                             <div
                                 onClick={() => onImageSelect(image)}
                             >
