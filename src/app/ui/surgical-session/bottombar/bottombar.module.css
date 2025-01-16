@@ -1,0 +1,50 @@
+.bottom-bar {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Spread children across the bar */
+  align-items: center; /* Vertically align children */
+  padding: 16px; /* Padding around the content */
+  background-color: #e1e3e6; /* Teams dark purple */
+  height: 60px; /* Fixed height for the bar */
+  position: relative; /* Ensures proper placement for child elements */
+  z-index: 10; /* Stays above overlapping elements */
+  overflow: hidden;
+}
+/* bottombar Button Styles */
+.bottombar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Square button */
+  height: 50px;
+  border-radius: 8px; /* Rounded corners */
+  margin: 8px 0; /* Spacing between buttons */
+  background-color: transparent; /* Default background */
+  color: #00796b; /* Default icon color (Primary Teal for CSM) */
+  font-size: 24px; /* Adjust icon size */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #d1d5db; /* Very thin border */
+}
+
+.bottombar-button:hover {
+  background-color: #ffffff; /* White background on hover */
+  color: #00796b; /* Teal icon color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.bottombar-button.selected {
+  background-color: #ffffff; /* Light gray for selected state */
+  color: #00796b; /* Teal icon color */
+  box-shadow: none; /* No shadow for selected state */
+  font-weight: bold; /* Optional: Highlight selection */
+}
+
+.bottombar-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Tooltip Styles */
+.bottombar-button:hover .tooltip {
+  display: block; /* Show tooltip on hover */
+}

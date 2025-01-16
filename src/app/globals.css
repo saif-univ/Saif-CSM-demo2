@@ -1,0 +1,331 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif; /* Or 'Open Sans' */
+  font-size: 16px; /* Base font size */
+  line-height: 1.5; /* Improve readability */
+  color: #333; /* Neutral text color for good contrast */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600; /* Use semi-bold for headings */
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit; /* Ensure form elements match the app's font */
+}
+
+/* TopBar Styles */
+.topbar {
+  height: 40px;
+  background-color: #e1e3e6; /* Teams dark purple */
+  color: #212121; /* Black text */
+  display: flex;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.topbar .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.topbar .modes {
+  display: flex;
+  gap: 3px;
+}
+
+.topbar .button {
+  background-color: #ffffff; /* Darker purple for active button */
+  color: #00796b; /* Primary purple button */
+  padding: 6px 12px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  align-items: flex-end; /* Bottom align to the parent container */
+  margin-bottom: -8px;
+  overflow: hidden; /* Hide any overflowing content */
+  z-index: 10; /* Ensure it appears above the content */
+  border-top: 1px solid #d1d5db; /* Optional: Light border for separation */
+  border-left: 1px solid #d1d5db; /* Optional: Light border for separation */
+  border-right: 1px solid #d1d5db; /* Optional: Light border for separation */
+}
+
+.topbar .button:hover {
+  background-color: #00acc1;
+}
+
+.topbar .button-active {
+  background-color: #00796b; /* Primary purple button */
+  color: #ffffff;
+  padding: 6px 12px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-bottom: -8px;
+}
+
+.topbar .button-active:hover {
+  background-color: #00acc1;
+}
+
+/* Sidebar Container Styles */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 60px; /* Fixed width for the sidebar */
+  background-color: #e1e3e6; /* Light neutral gray background for a clean look */
+  padding: 16px 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  height: 100vh; /* Full viewport height */
+  overflow-y: none; /* Allow scrolling if content overflows */
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px; /* Thin scrollbar for a cleaner look */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #b0bec5; /* Subtle gray scrollbar thumb */
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: #f5f5f5; /* Lighter background for the scrollbar track */
+}
+
+/* Sidebar Button Styles */
+.sidebar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Square button */
+  height: 50px;
+  border-radius: 8px; /* Rounded corners */
+  margin: 8px 0; /* Spacing between buttons */
+  background-color: transparent; /* Default background */
+  color: #00796b; /* Default icon color (Primary Teal for CSM) */
+  font-size: 24px; /* Adjust icon size */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #d1d5db; /* Very thin border */
+}
+
+.sidebar-button:hover {
+  background-color: #ffffff; /* White background on hover */
+  color: #00796b; /* Teal icon color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.sidebar-button.selected {
+  background-color: #ffffff; /* Light gray for selected state */
+  color: #00796b; /* Teal icon color */
+  box-shadow: none; /* No shadow for selected state */
+  font-weight: bold; /* Optional: Highlight selection */
+}
+
+.sidebar-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Tooltip Styles */
+.sidebar-button:hover .tooltip {
+  display: block; /* Show tooltip on hover */
+}
+
+.tooltip {
+  display: none; /* Hidden by default */
+  position: absolute;
+  left: 50px; /* Adjust based on button size */
+  top: 40px;
+  background-color: #afe5ec; /* White background */
+  color: #212121; /* Dark text */
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Resource Count Badge */
+.resource-count {
+  position: absolute;
+  top: 4px; /* Adjust to position the badge */
+  right: 0px; /* Adjust to position the badge */
+  background-color: #e53935; /* Red background for the badge */
+  color: white; /* White text */
+  font-size: 12px; /* Adjust size for the number */
+  font-weight: bold;
+  width: 20px; /* Fixed width for the circular badge */
+  height: 20px; /* Fixed height for the circular badge */
+  border-radius: 50%; /* Makes it a circle */
+  display: flex;
+  align-items: center; /* Center the number vertically */
+  justify-content: center; /* Center the number horizontally */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  z-index: 10; /* Ensure it appears above the button */
+}
+
+.csm-icon-container {
+  width: 60px; /* Fixed width for the container */
+  height: 50px; /* Fixed height for the container */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: transparent; /* Optional: Set a background color if needed */
+}
+
+.csm-icon {
+  width: 32px; /* Matches `w-8` (Tailwind's size for 8 * 4px) */
+  height: 32px; /* Matches `h-8` (Tailwind's size for 8 * 4px) */
+  cursor: pointer; /* Pointer cursor */
+  transition: transform 0.2s ease; /* Smooth hover effect */
+  transform: scale(1); /* Default scale */
+}
+
+.csm-icon:hover {
+  transform: scale(1.1); /* Slightly larger on hover */
+}
+
+/* SurgeryViewModes styling */
+.surgery-view-modes {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between buttons or items */
+}
+
+/* ViewModeInfo styling */
+.view-mode-info {
+  flex: 1; /* Allow this component to grow */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-size: 16px;
+  font-weight: 500;
+  color: #333; /* Neutral text color */
+}
+
+/* UserInfo styling */
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns content to the right */
+  gap: 12px; /* Space between user-related elements */
+  padding: 0 16px; /* Horizontal padding */
+}
+
+.resource-content-panel {
+  padding: 16px; /* Padding for inner spacing */
+  display: flex; /* Flexbox for alignment */
+  align-items: flex-start; /* Align items to the top */
+  justify-content: center; /* Center the content horizontally */
+  background-color: #ffffff; /* Background color for the panel */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow-x: hidden; /* Hide any overflowing content */
+  overflow-y: auto;
+  border: 1px solid #d1d5db; /* Optional: Light border for separation */
+}
+
+/* Outer container div */
+.center-content-panel {
+  flex: 1; /* Ensures the panel takes up remaining space in a flex layout */
+  background-color: #ffffff; /* White background for the panel */
+  padding: 10px; /* Inner spacing */
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Ensures children are stacked vertically */
+  gap: 16px; /* Adds spacing between inner elements */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid #d1d5db; /* Optional: Light border for separation */
+}
+
+/* Inner content div */
+.center-content-panel-inner {
+  height: 100%; /* Fills the height of the parent container */
+  background-color: #ffffff; /* White background for inner content */
+  border: 1px solid #d1d5db; /* Light border for separation */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Overplayer - Live video player styles */
+.player-wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Overplayer - Live video player styles */
+.player-hidden {
+  margin: 0 auto;
+  width: 100%;
+  visibility: hidden;
+}
+
+/* Player message container */
+.player-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.message-content p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.help-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Square button */
+  height: 50px;
+  border-radius: 8px; /* Rounded corners */
+  margin: 8px 0; /* Spacing between buttons */
+  background-color: transparent; /* Default background */
+  color: #00796b; /* Default icon color (Primary Teal for CSM) */
+  font-size: 24px; /* Adjust icon size */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.help-button:hover {
+  background-color: #ffffff; /* White background on hover */
+  color: #00796b; /* Teal icon color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.help-icon {
+  font-size: 1.5em;
+  font-weight: bold;
+}

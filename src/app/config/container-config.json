@@ -1,0 +1,98 @@
+[
+    {
+        "Id": "sha256:6574af5658471c4943b1d5fd5df56b9728b01b5db21d9372c6d42986046b84ea",
+        "RepoTags": [
+            "airensoft/ovenmediaengine:0.16.8",
+            "airensoft/ovenmediaengine:latest"
+        ],
+        "RepoDigests": [
+            "airensoft/ovenmediaengine@sha256:744455e1d9dbc2949fba2dfe15f8868463ca2026cafb0f39065bb37cf075c3cb"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2024-07-18T16:52:52.475922245Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "10000/udp": {},
+                "10001/udp": {},
+                "10002/udp": {},
+                "10003/udp": {},
+                "10004/udp": {},
+                "10005/udp": {},
+                "10006/udp": {},
+                "10007/udp": {},
+                "10008/udp": {},
+                "10009/udp": {},
+                "10010/udp": {},
+                "1935/tcp": {},
+                "3333/tcp": {},
+                "3334/tcp": {},
+                "4000/udp": {},
+                "4001/udp": {},
+                "4002/udp": {},
+                "4003/udp": {},
+                "4004/udp": {},
+                "4005/udp": {},
+                "80/tcp": {},
+                "8080/tcp": {},
+                "8090/tcp": {},
+                "9000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive"
+            ],
+            "Cmd": [
+                "/opt/ovenmediaengine/bin/OvenMediaEngine",
+                "-c",
+                "origin_conf"
+            ],
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/opt/ovenmediaengine/bin",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            },
+            "StopSignal": "SIGKILL"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 358096740,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/2c068b9cd69aaae74384c916eb12521ab738b2f970d519b91c1fd88c97522d35/diff:/var/lib/docker/overlay2/0c0145948125bc04170837cdc523e54e4ceefad85fae35eb1905b2bfc31f6f65/diff:/var/lib/docker/overlay2/4ae7b51bfb3dc2b881380658d4601d655ea59e1c425af92e093d6b4b3802d914/diff",
+                "MergedDir": "/var/lib/docker/overlay2/36dd358c08444b1c82f6ebd80d6117bc8c5e0352aecb3e97c23865176eb69afe/merged",
+                "UpperDir": "/var/lib/docker/overlay2/36dd358c08444b1c82f6ebd80d6117bc8c5e0352aecb3e97c23865176eb69afe/diff",
+                "WorkDir": "/var/lib/docker/overlay2/36dd358c08444b1c82f6ebd80d6117bc8c5e0352aecb3e97c23865176eb69afe/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:931b7ff0cb6f494b27d31a4cbec3efe62ac54676add9c7469560302f1541ecaf",
+                "sha256:dad78892b5ac5748f3a3241df09eda497df2d260d9651f0ca0e24c6ebd38ee92",
+                "sha256:637b71dbef9f9cfd8529064dc58a32c955980c969f845d261cd2cb2d4bcd4fe2",
+                "sha256:a4ca37d2b40f3689dd2ab239a67f521f83c88d852bbe27c3e9e31192416733cb"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

@@ -1,0 +1,86 @@
+.captured-images-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Adjusts based on container size */
+  gap: 16px; /* Space between cards */
+}
+
+.captured-image-card {
+  position: relative;
+  background-color: white;
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.captured-image-card:hover {
+  transform: scale(1.05); /* Slight grow effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.captured-image-card img {
+  width: 100%; /* Full width image */
+  height: 120px; /* Fixed height for thumbnails */
+  object-fit: cover; /* Ensure image fits within card */
+}
+
+.captured-image-info {
+  padding: 8px;
+  font-size: 12px;
+  color: #555; /* Neutral text color */
+}
+
+.captured-image-info p {
+  margin: 4px 0;
+}
+
+/* Delete icon styling */
+.delete-icon {
+  position: absolute;
+  bottom: 8px; /* Move to the bottom */
+  right: 8px; /* Align to the right */
+  background-color: #9b9898; /* Red delete icon background */
+  color: white;
+  border-radius: 50%; /* Circular button */
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.delete-icon:hover {
+  background-color: #c53030; /* Darker red on hover */
+}
+
+.pagination-controls {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pagination-button {
+  padding: 8px 12px;
+  background-color: #00796b; /* CSM theme color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pagination-button:hover {
+  background-color: #00594c; /* Darker hover color */
+}
+
+.pagination-button:disabled {
+  background-color: #d1d5db; /* Disabled state */
+  cursor: not-allowed;
+}

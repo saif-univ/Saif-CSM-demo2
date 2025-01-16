@@ -1,0 +1,11 @@
+[
+  {
+    "recordedBy": "Dr. John Doe",
+    "sessionId": "surgery123",
+    "description": "Recorded video from surgery session",
+    "elapsedTime": 7,
+    "filename": "clip1.jpg",
+    "filepath": "clip1.mp4",
+    "bookmarks": []
+  }
+]
