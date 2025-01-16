@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  ome:
+    image: airensoft/ovenmediaengine:0.16.8
+    container_name: ome-server
+    network_mode: host # Use host mode for easier network access
+    restart: always
+    volumes:
+      - C:\Apps\docker\ome\origin_conf:/opt/ovenmediaengine/origin_conf:ro
+      - C:\Source\csm\csm-web\public\surgical-session:/opt/ovenmediaengine/recordings
+    ports:
+      - "8081:8081" # REST API
+      - "1935:1935" # RTMP
+      - "3333:3333" # WebRTC signaling
+      - "3478:3478" # TURN/STUN
+      - "9999:9999" # SRT

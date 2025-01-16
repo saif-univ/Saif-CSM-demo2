@@ -1,0 +1,53 @@
+{
+  "name": "csm-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
+    "@reduxjs/toolkit": "^2.5.0",
+    "@tldraw/sync": "^3.4.1",
+    "@types/socket.io": "^3.0.2",
+    "@types/winston": "^2.4.4",
+    "axios": "^1.7.8",
+    "cornerstone-core": "^2.6.1",
+    "cornerstone-wado-image-loader": "^4.13.2",
+    "dicom-parser": "^1.8.21",
+    "html2canvas": "^1.4.1",
+    "lucide-react": "^0.469.0",
+    "markerjs-live": "^1.2.1",
+    "markerjs2": "^2.32.3",
+    "next": "15.0.3",
+    "ovenplayer": "^0.10.37",
+    "peerjs": "^1.5.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1",
+    "socket.io-client": "^4.8.1",
+    "tldraw": "^3.4.1",
+    "uuid": "^11.0.3",
+    "winston": "^3.17.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.4",
+    "@types/node": "^20",
+    "@types/ovenplayer": "^0.10.12",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/xml2js": "^0.4.14",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typedoc": "^0.27.2",
+    "typescript": "^5.7.2"
+  }
+}
