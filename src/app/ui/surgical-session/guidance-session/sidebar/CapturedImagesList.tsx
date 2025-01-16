@@ -339,7 +339,7 @@ const CapturedImagesList: React.FC<CapturedImagesListProps> = ({
 
     return (
         <div className="flex flex-col h-full w-full">
-            <h2 className="text-lg font-semibold mb-4">Captured Images check 2</h2>
+            <h2 className="text-lg font-semibold mb-4">Captured Images</h2>
 
             {/* Responsive Grid Container */}
             <div className="grid grid-cols-1 space-y-2 h-1/2 overflow-y-auto flex-grow">
@@ -352,19 +352,14 @@ const CapturedImagesList: React.FC<CapturedImagesListProps> = ({
                         {/* Image Thumbnail */}
                         <div>
                             <img
-                                src={`/surgical-session/surgery123/images/img1.jpg`}
+                                // src={`/surgical-session/surgery123/images/img1.jpg`}
+                                src={`/surgical-session/surgery123/images/${image.filename}`}
                                 // src={singleImg}
                                 alt={image.description}
                                 onClick={() => onImageSelect(image)}
                                 className="w-full h-24 object-cover cursor-pointer"
                             />
-                            <div
-                                onClick={() => onImageSelect(image)}
-                            >
-
-                                Check IMG {image.filename}
-                            </div>
-
+                            okokkok
                             {/* Delete Button - Appears on Hover */}
                             <button
                                 className="absolute top-2 right-2 p-1.5 bg-red-500 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
