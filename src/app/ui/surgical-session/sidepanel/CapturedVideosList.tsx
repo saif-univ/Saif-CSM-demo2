@@ -8,6 +8,18 @@ interface CapturedVideosListProps {
   onPlay: (video: VideoMetadata) => void;
 }
 
+const myVideos = [
+  {
+    "recordedBy": "Dr. John Doe",
+    "sessionId": "surgery123",
+    "description": "Recorded video from surgery session",
+    "elapsedTime": 7,
+    "filename": "clip1.jpg",
+    "filepath": "clip1.mp4",
+    "bookmarks": []
+  }
+]
+
 export default function CapturedVideoList({
   videos,
   onDelete,
@@ -15,17 +27,17 @@ export default function CapturedVideoList({
 }: CapturedVideosListProps) {
   return (
     <div className="grid grid-cols-1 gap-4">
-      {videos.map((video) => (
+      {myVideos.map((video) => (
         <div key={video.filename} className="relative bg-gray-100 p-2 rounded">
           <img
             // src={`/videos/thumbnails/${video.filename}.jpg`}
-            src={`/surgical-session/${video.sessionId}/videos/thumbnails/${video.filename}`}
+            src={`/surgical-session/surgery123/videos/thumbnails/${video.filename}`}
             alt="Video Thumbnail"
             className="w-full h-auto rounded cursor-pointer"
             // onClick={() => onPlay(video)}
             onClick={() =>
               onPlay(
-                `/surgical-session/${video.sessionId}/videos/${video.filepath}`
+                `/surgical-session/surgery123/videos/${video.filepath}`
               )
             }
           />
