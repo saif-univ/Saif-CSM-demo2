@@ -90,7 +90,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({
 
   return (
     <div style={{ display: "flex", gap: "0.5rem" }}>
-      {selectedIndex.map((item, index) => (
+      {selectedIndex?.map((item, index) => (
         <div
           key={index}
           onClick={() => handleSelection(index)}
