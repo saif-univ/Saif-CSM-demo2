@@ -3,7 +3,7 @@ import { ImageMetadata } from "@/app/types/imageTypes";
 import { TrashIcon } from "@heroicons/react/24/outline";
 const imgData =[
     {
-      "filename": "surgery_20241127T050921224Z.jpg",
+      "filename": "img1.jpg",
       "capturedBy": "Sridhar",
       "sessionId": "surgery123",
       "description": "Captured image from surgery session",
@@ -349,7 +349,7 @@ const CapturedImagesList: React.FC<CapturedImagesListProps> = ({
                         {/* Image Thumbnail */}
                         <div>
                             <img
-                                src={`/surgical-session/surger123/images/${image.filename}`}
+                                src={`/surgical-session/surgery123/images/${image.filename}`}
                                 alt={image.description}
                                 onClick={() => onImageSelect(image)}
                                 className="w-full h-24 object-cover cursor-pointer"
